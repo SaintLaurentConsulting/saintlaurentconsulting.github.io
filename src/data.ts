@@ -16,14 +16,12 @@ export const categories: Category[] = [
       {
         url: 'https://w.amazon.com/bin/view/AP_DAPP/',
         title: 'DAPP Team Wiki',
-        description:
-          'Wiki Page for DAPP Team'
+        description: 'Wiki Page for DAPP Team'
       },
       {
         url: 'https://w.amazon.com/bin/view/Pharmacy/Public/Teams/StrategicOperationsAnalytics_SOT/',
         title: 'SOT Wiki',
-        description:
-          'Wiki Page for SOT'
+        description: 'Wiki Page for SOT'
       }
     ]
   },
@@ -63,21 +61,18 @@ export const categories: Category[] = [
       {
         url: 'https://w.amazon.com/bin/view/AP_DAPP/Engagement_model/#HOncallTickets28SIM-T29',
         title: 'Raise a SIM-T',
-        description:
-          'Raise a SIM-T to DAPP-Eng'
+        description: 'Raise a SIM-T to DAPP-Eng'
       },
       {
         url: 'https://w.amazon.com/bin/view/AP_DAPP/Engagement_model/#HSIM28SprintTask29',
         title: 'Raise a SIM to DAPP',
-        description:
-          'Raise a SIM to DAPP'
+        description: 'Raise a SIM to DAPP'
       },
       {
         url: 'https://w.amazon.com/bin/view/AP_DAPP/Engagement_model/#HSIM28SprintTask29',
         title: 'Raise a SIM to SOT',
-        description:
-          'Raise a SIM to SOT'
-      },
+        description: 'Raise a SIM to SOT'
+      }
     ]
   }
 ]
