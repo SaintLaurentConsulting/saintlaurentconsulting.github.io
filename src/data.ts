@@ -14,14 +14,14 @@ export const categories: Category[] = [
     name: 'On boarding',
     data: [
       {
-        url: 'https://www.amazon.com/',
-        title: 'Quicksight Builder',
+        url: 'https://us-east-2.quicksight.aws.amazon.com/sn/dashboards/a2fa4f5f-c54a-4373-aac7-d0eb68aeb05d/sheets/a2fa4f5f-c54a-4373-aac7-d0eb68aeb05d_3c389903-d66a-427b-ac6c-2513d8d23e65',
+        title: 'Quicksight with Non-PII/Non-PHI',
         description: 'Quicksight Builder login'
       },
       {
-        url: 'https://aws.amazon.com/',
-        title: 'Quicksight Reader',
-        description: 'Quicksight Reader login'
+        url: 'https://analytics.pandora.amazon.dev/',
+        title: 'Quicksight with PII/PHI',
+        description: 'Pandora PII/PHI Quicksight link'
       },
       {
         url: 'https://pharmacy.amazon.com/',
