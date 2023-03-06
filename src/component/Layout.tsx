@@ -47,7 +47,7 @@ export default function Layout(props: { children: ReactNode }) {
             <Tabs.Tab value="/explore">Explore</Tabs.Tab>
             <Tabs.Tab value="/permissions">Permissions</Tabs.Tab>
             <Tabs.Tab
-              value="https://amazon.com"
+              value="https://w.amazon.com/bin/view/AP_DAPP/Engagement_model/#HOncallTickets28SIM-T29"
               ml="auto"
               rightSection={<IconExternalLink size={14} />}
             >
