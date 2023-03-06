@@ -26,7 +26,7 @@ export const categories: Category[] = [
           'Wiki Page for SOT'
       }
     ]
-  }
+  },
   {
     name: 'Data Analytical Platforms',
     data: [
