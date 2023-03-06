@@ -11,7 +11,24 @@ export interface Category {
 
 export const categories: Category[] = [
   {
-    name: 'On boarding',
+    name: 'Team Wikis',
+    data: [
+      {
+        url: 'https://w.amazon.com/bin/view/AP_DAPP/',
+        title: 'DAPP Team Wiki',
+        description:
+          'Wiki Page for DAPP Team'
+      },
+      {
+        url: 'https://w.amazon.com/bin/view/Pharmacy/Public/Teams/StrategicOperationsAnalytics_SOT/',
+        title: 'SOT Wiki',
+        description:
+          'Wiki Page for SOT'
+      }
+    ]
+  }
+  {
+    name: 'Data Analytical Platforms',
     data: [
       {
         url: 'https://us-east-2.quicksight.aws.amazon.com/sn/dashboards/a2fa4f5f-c54a-4373-aac7-d0eb68aeb05d/sheets/a2fa4f5f-c54a-4373-aac7-d0eb68aeb05d_3c389903-d66a-427b-ac6c-2513d8d23e65',
@@ -24,27 +41,33 @@ export const categories: Category[] = [
         description: 'Pandora PII/PHI Quicksight link'
       },
       {
-        url: 'https://pharmacy.amazon.com/',
-        title: 'Get your access today!',
-        description: 'We will add your access within 2 business days'
+        url: 'https://pillpack.looker.com/login',
+        title: 'Looker',
+        description: 'Pillpack Looker (Legacy)'
       }
     ]
   },
   {
-    name: 'Quick Links',
+    name: 'Contact Us',
     data: [
       {
-        url: 'https://example.com',
-        title: 'Raise a TT',
+        url: 'https://w.amazon.com/bin/view/AP_DAPP/Engagement_model/#HOncallTickets28SIM-T29',
+        title: 'Raise a SIM-T',
         description:
-          'Commodo aliqua aliquip dolore pariatur occaecat adipisicing.'
+          'Raise a SIM-T to DAPP-Eng'
       },
       {
-        url: 'https://example.com',
-        title: 'Raise a SIM',
+        url: 'https://w.amazon.com/bin/view/AP_DAPP/Engagement_model/#HSIM28SprintTask29',
+        title: 'Raise a SIM to DAPP',
         description:
-          'Exercitation esse reprehenderit amet magna dolor occaecat nostrud exercitation mollit enim sit.'
-      }
+          'Raise a SIM to DAPP'
+      },
+      {
+        url: 'https://w.amazon.com/bin/view/AP_DAPP/Engagement_model/#HSIM28SprintTask29',
+        title: 'Raise a SIM to SOT',
+        description:
+          'Raise a SIM to SOT'
+      },
     ]
   }
 ]
