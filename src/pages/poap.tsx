@@ -1,5 +1,5 @@
 import WIP from '../component/WIP'
 
-export default function Explore() {
+export default function POAP() {
   return <WIP />
 }

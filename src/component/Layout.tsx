@@ -23,6 +23,8 @@ export default function Layout(props: { children: ReactNode }) {
         }}
       >
         <Box
+          component="a"
+          href="https://pharmacy.amazon.com"
           mx="2rem"
           sx={{
             backgroundImage:
@@ -30,7 +32,8 @@ export default function Layout(props: { children: ReactNode }) {
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             width: '185px',
-            height: '28px'
+            height: '28px',
+            my: 'auto'
           }}
         />
         <Tabs
@@ -46,6 +49,7 @@ export default function Layout(props: { children: ReactNode }) {
             root: {
               height: '100%'
             },
+
             tab: {
               'color': colors.ink.hex,
               'border': 'none',
@@ -56,13 +60,29 @@ export default function Layout(props: { children: ReactNode }) {
               }
             },
             tabsList: {
-              height: '100%'
+              height: '100%',
+              borderBottom: 'none'
             }
           }}
         >
-          <Tabs.List pr={'1rem'}>
+          <Tabs.List pr="1rem">
+            {/* <Tabs.Tab value="/">
+              <Box
+                mx="2rem"
+                sx={{
+                  backgroundImage:
+                    'url(https://assets.prod.apex.wolfgang.a2z.com/assets/ap-logo-full-color.svg)',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'cover',
+                  width: '185px',
+                  height: '28px',
+                  my: 'auto'
+                }}
+              />
+            </Tabs.Tab> */}
             <Tabs.Tab value="/">Homepage</Tabs.Tab>
-            <Tabs.Tab value="/explore">Explore</Tabs.Tab>
+            <Tabs.Tab value="/dataset">Dataset</Tabs.Tab>
+            <Tabs.Tab value="/poap">POAP</Tabs.Tab>
             <Tabs.Tab value="/permissions">Permissions</Tabs.Tab>
             <Tabs.Tab
               value="https://w.amazon.com/bin/view/AP_DAPP/Engagement_model/#HOncallTickets28SIM-T29"
@@ -75,7 +95,9 @@ export default function Layout(props: { children: ReactNode }) {
         </Tabs>
       </Group>
 
-      <main>{props.children}</main>
+      <Box component="main" mb="xl">
+        {props.children}
+      </Box>
     </div>
   )
 }

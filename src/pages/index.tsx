@@ -103,6 +103,7 @@ const App = () => {
                         key={i}
                         component={'a'}
                         href={cat.url}
+                        target="popup"
                         sx={theme => ({
                           transition: 'all 0.2s',
                           [`@media (min-width: ${theme.breakpoints.sm}px)`]: {
