@@ -1,4 +1,5 @@
-import { Tabs } from '@mantine/core'
+import { Box, Group, Tabs } from '@mantine/core'
+import { useViewportSize } from '@mantine/hooks'
 import { IconExternalLink } from '@tabler/icons-react'
 import { useRouter } from 'next/router'
 import { ReactNode } from 'react'
@@ -10,32 +11,50 @@ export default function Layout(props: { children: ReactNode }) {
 
   return (
     <div className={`${ClassName}`}>
-      <nav
+      <Group
         style={{
           position: 'sticky',
           top: 0,
-          height: '4rem',
           left: 0,
           right: 0,
-          background: colors.teal.hex,
+          background: 'white',
           zIndex: 100,
           color: colors.concrete.hex
         }}
       >
+        <Box
+          my="2rem"
+          mx="2rem"
+          sx={{
+            backgroundImage:
+              'url(https://assets.prod.apex.wolfgang.a2z.com/assets/ap-logo-full-color.svg)',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            width: '185px',
+            height: '28px'
+          }}
+        />
         <Tabs
           value={router.asPath}
           onTabChange={val => router.push(val as string)}
           variant="outline"
           radius="xs"
+          h="4rem"
+          style={{
+            flexGrow: 1
+          }}
           styles={{
             root: {
               height: '100%'
             },
             tab: {
-              color: colors.dust.hex,
-              border: 'none',
-              borderBottom: '4px solid transparent',
-              fontSize: '1rem'
+              'color': colors.ink.hex,
+              'border': 'none',
+              'borderBottom': `4px solid transparent`,
+              'fontSize': '1rem',
+              '&[data-active]': {
+                borderColor: colors.teal.hex
+              }
             },
             tabsList: {
               height: '100%'
@@ -55,7 +74,8 @@ export default function Layout(props: { children: ReactNode }) {
             </Tabs.Tab>
           </Tabs.List>
         </Tabs>
-      </nav>
+      </Group>
+
       <main>{props.children}</main>
     </div>
   )

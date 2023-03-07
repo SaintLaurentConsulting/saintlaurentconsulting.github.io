@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   Container,
@@ -26,51 +27,57 @@ const App = () => {
   }
 
   return (
-    <Container>
-      <Stack spacing={36}>
-        <Stack mx="1rem" mt="2rem">
-          <Title order={1} color={colors.ink.hex}>
-            Amazon Pharmacy Data Services
-          </Title>
-          <Text
-            style={{
-              fontSize: '1.1rem'
-            }}
-            color={colors.jade.hex}
-          >
-            The portal to view, manage and consume datasets.
-          </Text>
-          <Group align={'flex-end'}>
-            <Input
-              ref={ref}
-              mt="2rem"
-              placeholder="Name or ID of the dataset"
-              icon={<IconSearch size={16} />}
+    <Stack spacing={36}>
+      <Box bg={colors.sage.hex} w="100%" py="5rem">
+        <Container>
+          <Stack>
+            <Title order={1} color={colors.ink.hex}>
+              Amazon Pharmacy Data Services
+            </Title>
+            <Text
               style={{
-                flexGrow: 1
+                fontSize: '1.1rem'
               }}
-              onKeyUp={(e: KeyboardEvent<Element>) => {
-                if (e.key === 'Enter') {
-                  search()
-                }
-              }}
-            />
-            <Button
-              sx={{
-                'background': colors.jade.hex,
-                ':hover': {
-                  background: colors.teal.hex
-                }
-              }}
-              onClick={search}
+              color={colors.jade.hex}
             >
-              Search
-            </Button>
-          </Group>
-        </Stack>
+              The portal to view, manage and consume datasets.
+            </Text>
 
-        <Divider my="sm" />
-
+            <Group align="flex-end" w="min(max(66%, 30rem), 90vw)" mt="2rem">
+              <Input
+                ref={ref}
+                size="md"
+                placeholder="Name or ID of the dataset"
+                icon={<IconSearch size={16} />}
+                style={{
+                  flexGrow: 1,
+                  boxShadow: '0 2px 4px hsl(0deg 0% 64% / 10%)'
+                }}
+                onKeyUp={(e: KeyboardEvent<Element>) => {
+                  if (e.key === 'Enter') {
+                    search()
+                  }
+                }}
+              />
+              <Button
+                size="md"
+                sx={{
+                  'background': colors.summer.hex,
+                  ':hover': {
+                    background: colors.summer.hex,
+                    opacity: 0.8
+                  }
+                }}
+                onClick={search}
+              >
+                Search
+              </Button>
+            </Group>
+          </Stack>
+        </Container>
+      </Box>
+      {/* <Divider my="sm" /> */}
+      <Container>
         <Stack spacing={'xl'}>
           {categories.map((c, i) => {
             return (
@@ -120,8 +127,8 @@ const App = () => {
             )
           })}
         </Stack>
-      </Stack>
-    </Container>
+      </Container>
+    </Stack>
   )
 }
 
