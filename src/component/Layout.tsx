@@ -23,7 +23,6 @@ export default function Layout(props: { children: ReactNode }) {
         }}
       >
         <Box
-          my="2rem"
           mx="2rem"
           sx={{
             backgroundImage:
